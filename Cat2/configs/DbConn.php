@@ -1,20 +1,19 @@
-<?php
 // Include the constants file
-include 'constants.php';
+require_once 'constants.php';
 
 // Connection options
-$options = [
+/*$options = [
     PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
     PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
     PDO::ATTR_EMULATE_PREPARES   => false,
-];
+];*/
 
 try {
     // Create a new PDO instance
-    $DbConn = new PDO("mysql:hostname=$hostname;database=$database", $username, $password, $options);
-
+    $pdo = new PDO("mysql:host=$hostname;dbname=$database", $username, $password); //$options);
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     // Check if the connection is successful
-    if ($DbConn) {
+    if ($pdo) {
         echo "Connected to the database successfully!";
     } else {
         echo "Failed to connect to the database.";
@@ -23,4 +22,3 @@ try {
     echo "Connection failed: " . $e->getMessage();
 }
 ?>
-
