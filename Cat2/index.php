@@ -10,7 +10,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
     </head>
     <body>
      <h2>Author Details Form</h2>
-    <form action="process_form.php" method="post">
+    <form action="AutRegistration.php" method="post">
         <label for="authorId">Author ID:</label>
         <input type="text" name="authorId" id="authorId" required>
 

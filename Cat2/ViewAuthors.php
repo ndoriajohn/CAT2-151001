@@ -2,6 +2,7 @@
 // Include the database connection file
 require_once "configs/DbConn.php";
 
+
 // Fetch all authors in ascending order by AuthorFullName using prepared statement
 $sql = "SELECT * FROM authorstb ORDER BY AuthorFullName ASC";
 $stmt = $pdo->prepare($sql);
@@ -15,7 +16,7 @@ $authors = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>View Authors</title>
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/css.css" />
 </head>
 <body>
     <!-- Top navigation -->

@@ -1,3 +1,4 @@
+<?php
 // Include the constants file
 require_once 'constants.php';
 
@@ -22,3 +23,4 @@ try {
     echo "Connection failed: " . $e->getMessage();
 }
 ?>
+

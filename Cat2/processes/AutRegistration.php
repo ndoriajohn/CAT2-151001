@@ -1,7 +1,6 @@
 <?php
 // Include the database connection file
 require_once"../configs/DbConn.php";
-
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $authorFullName = $_POST["authorFullName"];
     $authorEmail = $_POST["authorEmail"];
@@ -37,28 +36,29 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Author Registration</title>
+    <link rel="stylesheet" href="../css/css.css" />
 </head>
 <body>
     <h2>Author Registration</h2>
     <form action="AutRegistration.php" method="post">
         <!-- Include your form fields here -->
         <label for="authorFullName">Full Name:</label>
-        <input type="text" name="authorFullName" id="authorFullName" required>
+        <input type="text" name="authorFullName" id="authorFullName" required><br>
 
         <label for="authorEmail">Email:</label>
-        <input type="email" name="authorEmail" id="authorEmail" required>
+        <input type="email" name="authorEmail" id="authorEmail" required><br>
         
         <label for="authorAddress">Address:</label>
-        <input type="text" name="authorAddress" id="authorAddress">
+        <input type="text" name="authorAddress" id="authorAddress"><br>
 
         <label for="authorBiography">Biography:</label>
-        <textarea name="authorBiography" id="authorBiography" rows="5"></textarea>
+        <textarea name="authorBiography" id="authorBiography" rows="5"></textarea><br>
 
         <label for="authorDateOfBirth">Date of Birth:</label>
-        <input type="date" name="authorDateOfBirth" id="authorDateOfBirth">
+        <input type="date" name="authorDateOfBirth" id="authorDateOfBirth"><br>
 
         <label for="authorSuspended">Suspended:</label>
-        <input type="checkbox" name="authorSuspended" id="authorSuspended">
+        <input type="checkbox" name="authorSuspended" id="authorSuspended"><br>
 
         <br>
 
