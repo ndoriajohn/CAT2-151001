@@ -22,6 +22,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt->bindParam(6, $authorSuspended);*/
    try {
     $stmt->execute([$authorFullName, $authorEmail, $authorAddress, $authorBiography, $authorDateOfBirth, $authorSuspended]);
+    header("Location: ../ViewAuthors.php");
+    exit();
 } catch (PDOException $e) {
     echo "Error: " . $e->getMessage();
 }
@@ -65,5 +67,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         <input type="submit" value="Submit">
     </form>
+    <br
+        <h3><center> VIEW REGISTERED AUTHORS</center></h3>
+    <br>
+    
+<center> <a href="../ViewAuthors.php">CLICK HERE</a></center>
 </body>
 </html>

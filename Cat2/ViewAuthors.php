@@ -69,13 +69,21 @@ $authors = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 <p>No authors found.</p>
             <?php endif; ?>
         </div>
+        <br>
 <!--
         <div class="sidebar">
             <h3>Side Bar</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
         </div>
-    </div>
 -->
+    </div>
+<br>
+
+<p>
+<center>
+     <a href="processes/AutRegistration.php">REGISTER HERE</a>
+</center>
+</p>
     <!-- Footer -->
     <div class="footer">
         Copyright &copy; 151001 2023
@@ -88,7 +96,7 @@ $authors = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 // Redirect to the delete script or process
                 window.location.href = 'DelAuth.php?AuthorId=' + authorId;
             }
-        }
+    }
     </script>
 </body>
 </html>
